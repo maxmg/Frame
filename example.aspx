@@ -12,6 +12,7 @@
     Dim myProject As New Frame(Of Project)
 
     myProject.Query = "SELECT * FROM projects WHERE id > 2"
+    myProject.Execute()
     Response.Write(myProject.Serialize(myProject)) 'Writing JSON
 
     'POST back JSON object
